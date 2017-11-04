@@ -3,6 +3,8 @@ const http = require("http");
 const morgan = require("morgan");
 const bodyparser = require("bodyparser");
 
+/* some comment*/
+
 const hostname = "localhost";
 const port = 3000;
 
