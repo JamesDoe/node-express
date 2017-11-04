@@ -1,7 +1,7 @@
 const express = require("express");
 const http = require("http");
 const morgan = require("morgan");
-const bodyparser = require("bodyparser");
+const bodyparser = require("body-parser");
 
 const hostname = "localhost";
 const port = 3000;
