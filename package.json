@@ -1,0 +1,19 @@
+{
+  "name": "node-express",
+  "version": "1.0.0",
+  "description": "\"Simple Express Example\"",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "express": "^4.16.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index"
+  },
+  "author": "James Doe",
+  "license": "ISC"
+}
