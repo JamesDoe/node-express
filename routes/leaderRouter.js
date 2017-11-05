@@ -12,17 +12,16 @@ leaderRouter.route("/")
     next();
 })
 .get ((req,res,next) => {
-    res.send("Will send all the leaders to you.");
+    if (req.originalUrl == "/leaders") {res.end("GET not supported on /leaders.")} else {res.end("Will send all the leaders to you.")}
 })
 .post ((req,res,next) => {
-    res.end("Will add the leaders: " + req.body.name + " with details: " + req.body.description);
+    if (req.originalUrl == "/leaders") {res.end("POST not supported on /leaders.")} else {res.end("Will add the leaders: " + req.body.name + " with details: " + req.body.description);}
 })
 .put ((req,res,next) => {
-    res.statusCode = 403;
-    res.end("PUT response not supported on /leaders.");
+    if (req.originalUrl == "/leaders") {res.end("PUT not supported on /leaders.")} else {res.statusCode = 403;     res.end("PUT response not supported on /leadership.")}
 })
 .delete ((req,res,next) => {
-    res.end("Deleting all leaders!");
+    if (req.originalUrl == "/leaders") {res.end("DELETE not supported on /leaders.")} else {res.end("Deleting all leaders!")}
 });
 
 leaderRouter.route("/:leaderID")

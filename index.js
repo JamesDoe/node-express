@@ -15,6 +15,7 @@ app.use(bodyparser.json());
 
 app.use("/dishes", dishRouter);
 app.use("/leaders", leaderRouter);
+app.use("/leadership", leaderRouter);
 app.use("/promotions", promoRouter);
 
 app.use(express.static(__dirname + "/public"));
